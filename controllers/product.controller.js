@@ -72,7 +72,7 @@ exports.getFilteredProducts = async (req, res) => {
 
 exports.getBestSellers = async (req, res) => {
   try {
-    const bestSellers = await productModel.find({ isBestSeller: true }).populate('category', 'name').populate('supercategory', 'name');
+    const bestSellers = await productModel.find({ bestSeller: true });
     return res.status(200).json(bestSellers);
   } catch (error) {
     return res.status(500).json({ error: error.message });
