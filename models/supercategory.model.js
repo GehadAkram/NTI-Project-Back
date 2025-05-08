@@ -9,6 +9,9 @@ const superCategorySchema = mongoose.Schema({
   image: {
     type: String,
   },
+  description: {
+    type: String,
+  },
   isDeleted: {
     type: Boolean,
     required: true,
